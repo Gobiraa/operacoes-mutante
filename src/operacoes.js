@@ -31,11 +31,11 @@ function somaArray(numeros) {
 
 // === Bloco 2: Operações em Arrays e Checagens (11-20) ===
 function maximoArray(numeros) {
-  if (numeros.length === 0) throw new Error('Array vazio possui valor máximo.');
+  if (numeros.length === 0) throw new Error('Array vazio não possui valor máximo.');
   return Math.max(...numeros);
 }
 function minimoArray(numeros) {
-  if (numeros.length === 0) throw new Error('Array vazio possui valor mínimo.');
+  if (numeros.length === 0) throw new Error('Array vazio não possui valor mínimo.');
   return Math.min(...numeros);
 }
 function valorAbsoluto(n) { return Math.abs(n); }
@@ -105,7 +105,7 @@ function isMaiorQue(a, b) { return a > b; }
 function isMenorQue(a, b) { return a < b; }
 function isEqual(a, b) { return a === b; }
 function medianaArray(numeros) {
-  if (numeros.length === 0) throw new Error('Array vazio possui mediana.');
+  if (numeros.length === 0) throw new Error('Array vazio não possui mediana.');
   const sorted = [...numeros].sort((a, b) => a - b);
   const mid = Math.floor(sorted.length / 2);
   if (sorted.length % 2 === 0) {
