@@ -90,13 +90,12 @@ describe('Suíte Definitiva - Meta 98%+', () => {
         // Produto Array
         expect(produtoArray([])).toBe(1); //
         expect(produtoArray([2, 3])).toBe(6);
-
-        // Clamp Extremo
+        // Clamp
+        expect(clamp(-0, 0, 20)).toBe(-0); 
+        expect(clamp(0, -20, -0)).toBe(0); 
         expect(clamp(5, 10, 20)).toBe(10);
-        expect(clamp(10, 10, 20)).toBe(10);
-        expect(clamp(15, 10, 20)).toBe(15);
-        expect(clamp(20, 10, 20)).toBe(20);
         expect(clamp(25, 10, 20)).toBe(20);
+        expect(clamp(15, 10, 20)).toBe(15);
 
         // Conversões e Inverso
         expect(isDivisivel(10, 2)).toBe(true);
