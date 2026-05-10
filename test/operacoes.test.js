@@ -88,8 +88,10 @@ describe('Suíte Definitiva - Meta 98%+', () => {
         expect(isPrimo(9)).toBe(false);
 
         // Produto Array
-        expect(produtoArray([])).toBe(1); //
+        expect(produtoArray([])).toBe(1);
         expect(produtoArray([2, 3])).toBe(6);
+
+        expect(produtoArray({ length: 0 })).toBe(1);
         // Clamp
         expect(clamp(-0, 0, 20)).toBe(-0); 
         expect(clamp(0, -20, -0)).toBe(0); 
